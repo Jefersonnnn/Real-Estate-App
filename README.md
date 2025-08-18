@@ -48,3 +48,13 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+## Figma
+https://www.figma.com/design/rpiqHBQsyE5fQudIpWHKbh/Real-Scout---Real-Estate-App?node-id=2-2&p=f&t=ruX977lyJlcfCUX2-0
+
+## Database Setup
+https://jsmastery.notion.site/Database-Setup-16260f3cbaf3807f8fb6cbed8d1e84fd
+
+## Video KIT
+https://jsmastery.com/video-kit/65a28012-84bd-4357-aef5-00c7e4391d8d
