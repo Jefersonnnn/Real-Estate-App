@@ -7,40 +7,30 @@ module.exports = {
   presets: [require('nativewind/preset')],
   theme: {
     extend: {
+      fontFamily: {
+        rubik: ["Rubik-Regular", "sans-serif"],
+        "rubik-bold": ["Rubik-Bold", "sans-serif"],
+        "rubik-extrabold": ["Rubik-ExtraBold", "sans-serif"],
+        "rubik-medium": ["Rubik-Medium", "sans-serif"],
+        "rubik-light": ["Rubik-Light", "sans-serif"],
+        "rubik-semibold": ["Rubik-SemiBold", "sans-serif"],
+      },
       colors: {
-        border: withOpacity('border'),
-        input: withOpacity('input'),
-        ring: withOpacity('ring'),
-        background: withOpacity('background'),
-        foreground: withOpacity('foreground'),
         primary: {
-          DEFAULT: withOpacity('primary'),
-          foreground: withOpacity('primary-foreground'),
-        },
-        secondary: {
-          DEFAULT: withOpacity('secondary'),
-          foreground: withOpacity('secondary-foreground'),
-        },
-        destructive: {
-          DEFAULT: withOpacity('destructive'),
-          foreground: withOpacity('destructive-foreground'),
-        },
-        muted: {
-          DEFAULT: withOpacity('muted'),
-          foreground: withOpacity('muted-foreground'),
+          100: "#0061FF0A",
+          200: "#0061FF1A",
+          300: "#0061FF",
         },
         accent: {
-          DEFAULT: withOpacity('accent'),
-          foreground: withOpacity('accent-foreground'),
+          100: "#FBFBFB",
         },
-        popover: {
-          DEFAULT: withOpacity('popover'),
-          foreground: withOpacity('popover-foreground'),
+        black: {
+          DEFAULT: "#000000",
+          100: "#8C8E98",
+          200: "#666876",
+          300: "#191d31",
         },
-        card: {
-          DEFAULT: withOpacity('card'),
-          foreground: withOpacity('card-foreground'),
-        },
+        danger: "#F75555"
       },
       borderWidth: {
         hairline: hairlineWidth(),
@@ -49,18 +39,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return platformSelect({
-        ios: `rgb(var(--${variableName}) / ${opacityValue})`,
-        android: `rgb(var(--android-${variableName}) / ${opacityValue})`,
-      });
-    }
-    return platformSelect({
-      ios: `rgb(var(--${variableName}))`,
-      android: `rgb(var(--android-${variableName}))`,
-    });
-  };
-}
